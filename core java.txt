@@ -1,0 +1,2215 @@
+Father of java: james gosling 
+java : 1995
+python : 1991
+
+sun micro system
+oracle
+java 1
+what is c: is a program language
+what is c++: is a programming language
+1) What is java?
+a) object oriented programming language
+
+
+2) where is java used?
+
+3) flavours of java
+
+4) pre requisite to learn java
+
+
+5) what do i become after completion of this core java course?
+
+1) encapsulation
+2) abstraction
+3) polymorphism
+4) inheritance
+
+
+JSHELL: SHORT PIECES OF CODE: SNIPPET
+jshell> 23
+$1 ==> 23
+
+jshell> $1*10
+$2 ==> 230
+
+jshell> float avg=99.9;
+|  Error:
+|  incompatible types: possible lossy conversion from double to float
+|  float avg=99.9;
+|            ^--^
+
+jshell> float avg=99.9f;
+avg ==> 99.9
+
+jshell> double x=12.5f;
+x ==> 12.5
+
+jshell> /history
+
+23
+$1*10
+float avg=99.9;
+float avg=99.9f;
+double x=12.5f;
+/history
+
+jshell> /list
+
+   1 : 23
+   2 : $1*10
+   3 : float avg=99.9f;
+   4 : double x=12.5f;
+
+jshell> /drop 3
+|  dropped variable avg
+
+jshell> avg
+|  Error:
+|  cannot find symbol
+|    symbol:   variable avg
+|  avg
+|  ^-^
+
+jshell> /edit 4
+x ==> 1089.634033203125
+
+jshell> x
+x ==> 1089.634033203125
+
+jshell> /drop 4
+|  This command does not accept the snippet '4' : double x=12.5f;
+|  See /types, /methods, /vars, or /list
+
+jshell> /list
+
+   1 : 23
+   2 : $1*10
+   5 : double x=1089.634f;
+   6 : x
+
+jshell> /drop 5
+|  dropped variable x
+
+jshell> x
+|  Error:
+|  cannot find symbol
+|    symbol:   variable x
+|  x
+|  ^
+
+
+
+Function: is a block of statements that are required repeatedly in the program
+without function what is the problem?
+1) code redundancy ( code repetition)
+2) if any modification is done those modifications are not reflected back automatically
+
+syntax:
+
+R.T	function_name(formal parameters)
+{
+	block of statements
+}
+
+advantage:
+1) control code redundancy
+2) modifications done to the body of the function automatically reflected back
+to every function call
+
+note: function wont be executed on its own it must be called
+function enables WORA principle
+Write once Run any no.of times
+int sum(int a,int b)  
+{
+	return a+b;
+}
+
+
+in industry, there are 2 famous methodologies:
+1) procedure oriented approach
+2) object oriented approach
+
+drawback of procedure oriented approach:
+data & code that act upon the data they are not properly organized
+a) complexity can not be handled
+2) data is not secured
+
+advantage of object orientation: 
+data & code that act upon the data they are properly organized 
+
+object oriented features:
+=====================
+1) encapsulation: is a process of combining  the data & eligible code 
+that act upon the data into a single unit of organization so that data is secured
+from ineligible code of the same application
+2) abstraction: hiding implementation details by showing essential functionality 
+3) polymorphism: extensibility of the code
+poly: many
+morph: form
+
+friend: behave
+parents: behave
+alone: behave
+relative: behave
+
+4) inheritance: offers code reusability
+
+RAD : RAPID APPLICATION DEVELOPMENT
+
+show me in your project where did u implement encapsulation feature?
+whereever in java program/application if we encounter the terms
+class &object there encapsulation is implemented
+
+class:
+
+object:
+
+what is a structure?
+is a collection of elemenets of either similar or dissimilar data items
+
+why do we require  a structure?
+to create userdefined datatype
+
+what is the use of userdefined datatype?
+to represent business entity information in a flexible manner
+
+what is the drawback of structure?
+we cant combine the data(variables)  & eligible code(functions) together
+
+
+physics: mass length time
+units:     kg	kms		secs
+derive quantities
+derive units
+
+i want to represent one book information:
+
+char title1[50],title2[50],........................25000
+int pages1,pages2,.........25000;
+float cost;
+char publisher[50];
+business appication: library, banking, factory
+entities:
+book 
+account
+employee
+student
+vehicle
+
+in c language: char    int    float      double
+userdefined data type: structure
+
+
+syntax:
+
+class student
+{
+	char sname[50];
+	int rno,total;
+	float avg;
+	long long int aadhar;
+	long long int phno;
+void teacher()
+{
+}
+void principal()
+{
+}
+
+}s1;
+
+void sweeper()
+{
+}
+void watchmen()
+{
+}
+
+struct complex
+{
+	int real;
+	int imag;
+};
+
+struct complex c1;  // c1 is a variable of UDT  reference variable
+int x; // primitive variable
+
+structure:
+
+1) struct is a keyword
+2) using structure we can create userdefined data type
+3) plan/proposal/blueprint
+4) contains data 
+
+
+class:
+1) as far as syntax is considered class is similar to structure
+2) is a keyword
+3) contains data ( variables ) & code ( functions) that act upon the data
+4) is a plan/proposal/blueprint
+5) using class we can create user defined data type
+6) is a basis for encapsulation
+
+
+
+object:
+======
+1) instance of a class
+2) memory block holding the data
+3) physical existence of a plan
+4) object cotains: data & code that act upon the data
+5) object implements encapsulation
+
+class Book
+{
+
+	int pages;
+	float cost;
+}
+struct student s1;
+Book b1;
+
+
+
+
+
+class:
+1) is similar to structure concept in c
+2) using class we can create our own data type
+3) is a keyword
+4) contains data & eligible code that act upon the data
+5) basis for encapsulation
+6) is a plan/proposal/blueprint
+
+
+object:
+======
+1) instance of a class
+2) memory block holding the data
+3) implements encapsulation
+4) contains data & eligible code that act upon the data
+
+student s1,s2,s3,s4;
+
+every object contains 3 things:
+1) state of an object: data part of an object
+
+2) behaviour of an object: methods(functions) associated with an object
+
+
+3) identity of an object:name of an object
+
+=========================================================
+ data & code: not properly organized
+ object orientation: encapsulation
+ structure
+ in java: we can create our own data type:userdefined data type
+ class
+ =======
+ 1) is used to create U.D.T
+ 2) is a keyword
+ 3) is a basis for encapsulation
+ 4) is a plan/proposal/blueprint
+ 5) eligigble code & data
+
+object:
+======
+1) memory block holding the data
+2) a variable of type class
+3) contains data & eligible
+4) implements encapsulation
+===============================================================
+object oriented programming in java:
+=================================
+
+1) create a directory: it will act as a default package 
+without package no java program exists
+
+2) EDITING / DEVELOPING THE PROGRAM: 
+IDE: INTEGRATED DEVELOPMENT ENVIRONMENT
+
+open any text editor: notepad/editplus type the java program & save the program
+in a directory created in step1: with any name but file extension must be .java
+file created in this step is also known as : source code/compilation unit
+
+3) compiling the program: open dos/command prompt & make the directory created in step1
+as a current working directory. now type the following command
+	
+		javac filename
+		ex: javac one.java
+	the command will be received by OS then OS will invoke the java compiler process.
+	if you are java program is syntactically correct then java compiler will product one or more
+	.class files 
+			one.java  ====> one.class
+			wrong answer: 
+
+		first.c   ===>  compiler =====> first.exe
+		factorial.c====> compiler====> factorial.exe
+
+4) executing the java program:
+			java initialclassname
+			ex: java 
+
+what is initial classname?
+is a class which contains jvm understandalbe main method
+
+public static void main(String args[])
+{
+}
+
+what is a method?
+is a function defined within a class
+
+what is signature of method/function?
+signature includes: name + parameters information
+
+parameters information: no.of parameters, type of parameters, order of parameters
+
+Note: return type is not included in signature 
+
+name of the function + parameters information
+
+Q: what is args?
+ans: 
+
+Q: public & static keyword can we exchange the places?
+ans: yes
+
+Q: can i write main method in two different classes belongs to same program?
+ans: yes you can 
+
+Q: can i write more than one main method with in  a single class?
+with same signature if u write it wont allowed
+if signatures are different thenwe can write more than one main method with in a single class
+however jvm will recognize only one among them 
+
+Q: if i remove main method from our program,at compile time  what error will come?
+ans: no error will come
+so we can compile a program without main method 
+but we cant run the program without main method
+
+Q: what is Sample in hello.java?
+ans : it is the name of the class
+
+Q: what is an identifier?
+named element in the program
+while developing any java application/program for some elements we are supposed to provide the name for ex:  variables, classes, functions/methods,packages,arrays,interface etc
+
+rules for naming an identifier:
+==========================
+a) name must start with an alphabet(lowercase/uppercase) (or) underscore (or) $
+b) from second letter onwards it may alphanumeric 
+c) no spaces are allowed within a name
+d) no special symbols are allowed (except underscore, dollar symbols)
+e) no restriction on the length of the name
+f) keywords cant be used 
+g) case sensitive : lower & upper case letters are treated differently
+
+conventional rule for naming  a class: 
+if the name contains more than one word ,every word first letter should a capital letter
+Ex:
+
+AccountDetails
+ReadFromFile
+WriteDataToTheFile
+ReadMarks
+
+conventional Rule for naming a method/function: if function/method name contains more than one word
+
+from 2nd word onwards every word should start with capital lettter but not for first word
+
+for ex:
+		calculateStudentMarks
+		bonusAnnouncement
+variable: 
+is a named memory block holding the data
+conventional rule: we shouldnt use any capital letter within the variable name
+
+what are keywords in java?
+keywords are reserved words
+every reserved word will have a specific meaning
+
+
+
+javac filename.java
+
+java initialclassname
+
+
+struct student
+{
+	int rno;
+	float avg;
+};
+struct student s1;
+s1.rno=125;
+
+
+
+
+why do we write a program?
+to process the data
+
+where do we store the data?
+in computer : memory 
+
+
+
+
+marks  - variable
+calGrade  ---  method
+
+FileWriter
+BufferedReader
+
+String --- class
+System === class
+
+c++ is poor object oriented programming language
+java is a pure object oriented programming language
+
+
+Variable: is a named memory block holding the data
+
+data types supported by java:
+1) number:
+	a) number without decimal part: integer
+
+	byte,short,int , long
+
+	byte - 1 byte memory: -128 to +127
+	short -2 bytes: -32768 to 32767
+	int - 4 bytes : -2147483648 to 2147483647
+	long int - 8 bytes
+
+
+
+	b) number with decimal part : float, double 
+	float - 4 bytes
+	double - 8 bytes
+	 1.25
+	 0.0000000000000000000000000000002
+
+2) text: char 
+	in c programming:   char ch;   will take 1 byte of memory in c programming
+	ASCII CODE  256 SYMBOLS 
+	in java : character variable can occupy 2 bytes of memory 
+	UNICODE SYSTEM
+
+
+3) boolean : true, false
+
+java is a statically typed programmning language
+
+python is a dyanmically typed programming language
+
+int x=265;
+
+
+in java variables are of the following types:
+1) local variable: any variable declared inside a function/method
+2) instance variable
+3) static varialbe
+
+Type casting: conversion of one data type into another data type
+implicit type casting: in java lower data type can be converted to higher types automatically
+
+jshell> float avg=35
+avg ==> 35.0
+
+
+explicit type casting : sometimes we need to mention/request for conversion
+jshell> float z=(float)23.5689
+z ==> 23.5689
+
+type conversions are possible:
+
+byte  ===>  short ===> int ===> long ===> float ====> double
+
+char ===> int 
+
+
+
+step-1: to create either 1 or more employee first  we need to check whethere java is providing
+any data type with that name for ex: employee 
+step-2: if there  is no data type exist with the name : employee we can create our own data type
+using a concept  called: class
+in java anything is converted into .class file it is eligible to act as Data type
+
+local variables must be initialized
+what is a local variable?
+a variable declared inside  a method
+
+Employee  e1;
+e1 is  a variable of type class: reference variable 
+ref variable is also known as restricted pointer
+in java any one of the following values can be provided to a reference variable
+a) null
+b) object address
+
+how to create object in java?
+syntax:   
+<classname>   objname=new <classname>()
+
+where can we create instance/non static variable?
+within class & outside of all methods 
+
+non static variables are also called instance variables
+if a variable value changes from object to object such variables must be declared as a non static variable
+ex: rno, eid, aadhar
+where do we create non static variable?
+inside the class & outside of all methods 
+
+if a variable value is not changed from object to object such variables must be declared as a static variable
+ex: college level application: cname
+	banking application: branch: sbi
+
+<classname> objname=new <classname>();
+
+What is the drawback in Employee program?
+if you create either one or more objects , all objects are getting same state
+what is state of an object?
+data part of an object
+
+what is the solution for the above problem?
+1) taking the data for instance variable dynamically
+2) modify signature of the method 
+
+signature of the method: includes name+ parameters info
+note: signature doesnt includes return type
+parameters info: no.of parameters, type of parameter,order of parameter
+
+
+current object: is an object on which method is called
+void
+int
+float
+char
+
+constructors:
+is a specialized method of a class
+
+1) name of the constructor must be same as classname
+
+2) constructor must not have any return type including "void"
+
+class A
+{
+	void A()
+	{
+	}
+}
+
+3) normal methods must be called explicitly but a constructor is called implicitly 
+4) Employee e1=new Employee();       object is created
+	e1.displayEmployee()		
+
+	when we are able to call instance(non static)/normal method?
+	after object creation only
+
+	Constructor is called at the time of  object creation
+5)	normal(instance/nonstatic) methods can be called any no of times on the object
+but remember constructor is called only once in the life time of an object
+6)  usage: 
+	giveDataToEmployee()       to set state of an object
+	displayEmployee()		print state of an object
+	calGrade()				to process state of an object / perform certain operation on the data part of an object
+
+	constructors are meant for to construct initial state of an object 
+
+	class Employee
+	{
+		String ename;
+		float salary;
+		int exp;
+	}
+
+	
+	primary functionality of constructor
+	types of constructors with examples
+		1) zero/no arg constructor
+		2) parameterized constructor: constructor that can take inputs from the user at the time of calling the cosntructor 
+	what is the problem with zero arg/no arg constructor?
+	if u create more than one object , all objects will get same state but for practical reasons 
+	objects state must be different 
+	
+	javap
+	default constructor:   without constructor no java program exist
+	at the time of compilation, compiler provides default constructor if your class doesnt contain any type of constructor
+
+	
+	
+	constructor overloading: defining more than one constructor with in  a class. constructors
+	signatures must be different
+
+	1) no.of parameters mut be different
+	2) type of parameters must be different
+	3) order of parameters must be different 
+
+	Sample1(int x,float y)
+	{
+	}
+	Sample1(float a,int b)
+	{
+	}
+
+	constructor chaining: calling a constructor from another constructor of the same class
+	this keyword purpose
+	using this keyword we can achieve constructor chaininig
+	note: always "this" statement must be the first statement in constructor
+
+	name clash:
+
+
+	proper constructor or not
+
+
+	class Test
+	{
+		Test()
+		{
+			super();  			
+		}
+
+	}
+
+	Modifiers in java:
+	=================
+	Access specifiers
+
+1) public
+2) private: class level visibility/accesbility
+3) protected
+4) static
+5) abstract
+6) final
+7)strictfp
+8) volatile
+9) synchronized
+10) transient
+11) <default>
+12) native
+
+public,private,protected,<default> will be considered as access specifier
+class T
+{
+	private int x;
+	void f1()
+	{
+	}
+}
+if a member of a class is declared as "private" : class level visibility 
+that member is visible/accessible to other members of the same class but outside the class we cant access
+
+we can declare a variable/method/constructor: with modifier private
+but top level class should not be declared with a modifier: private
+
+if a member of a class is declared as "public" : total java environment
+
+can we declare a top level class a public?
+yes, you can
+but however it should be save to a file with whose name must mach with public class name otherwise compiler generates an error
+class/variable/constructor/method: public 
+
+
+if either class or member of a class is not declared with any modifier: then which 
+modifier is applicable???? <default>
+
+if a member of a class is <default>: it is accessible to whom???  package level visibility/accessibility
+
+
+protected: if a member of a class is declared as protected: visibility: package + child class level visibility
+
+can we declare top level class as protected?
+no
+on top level class: private, protected not allowed the only modifier allowed is : public
+if u didnt declared with any modifier: <default>
+
+variables/constructors/method: can be declared with modifier: protected
+
+
+ what is a method?
+ is a function defined inside a class
+
+ method signature: in java method signature includes name + parameters information
+ no.of parameters, type , order
+
+Method Overloading:  defining more than one method with the same name but 
+signatures must be different
+
+Why method overloading?
+to make java object polymorphic object
+
+in object oriented system objects are of 2 types:
+
+1) monomorphic object: if an object behaving uniquely in all situations 
+2) polymorphic object: if an object behaving differently in different situations
+
+
+Polymorphism: if an entity behaving differently in different situations 
+poly means many
+morph means forms
+ex: chameleon 
+
+when you are in house with parents: how do u behave
+when you are with friends: how do u behave
+when you are in relatives house: how do u behave
+when you are alone in a closed rooom: what is ur behaviour
+
+Polymorphism is an object oriented feature:
+
+how to implement polymorphism in java?
+using
+a) method overloading
+b) method overriding
+
+polyrmorphism is of 2 types
+1) static polymorphism
+2) dynamic polymorphism
+
+type of polymorphism depends on binding
+What is binding?
+is the process of linking method call statement with method definition
+if linking is done by the compiler it is static binding
+if linkking is done by jvm it is dynamic binding
+
+if static binding is involved: static polymorphism
+if dynamic binding is involved: dynamic polymorphism
+
+
+
+
+class Test
+{
+	viod add(int x,float y)
+	{
+	}
+
+}
+
+encapsulation: provide the security to the data  from ineligible code of the sample 
+abstraction: reduces complexity
+polymorphism: offeres extensibility of the code
+Inheritance: offers code reusability 
+
+Inheritance:
+1) gettintg everything from the parent (behaviour+ properties) to the child
+2) creating a new class : from exisitng class: code reusability
+3) creating parent - child relationship between two classes
+4) through inheritance is-a relationship is established between two classes
+5) java provides a keyword: extends to create p-c relationship between two classes
+6) in java : parent class is a super class , whereas child class is a sub class
+Interview: if any class doesnt have a parent java provides a parent for that:
+for every class : Object class will act as a super class
+7) superclasses are generalized classses
+8) child classes are specialized classes
+9) Parent class reference can hold child class object also
+     Car is a child of Vehicle
+
+     class Vehicle
+     {
+     }
+     class Car extends Vehicle
+     {
+     }
+
+
+     Vehicle  v1=new Car();
+
+
+Types of Inheritance:
+1) single Inheritance:  is a class is derived from only one class (or) if  a class contains at max one super class
+	a) multi level inheritance : sub class acting as a intermeidate super class for its  child class
+	b) hierarchial inheritance: superclass having more than one child class
+2) Multiple Inheritance: java doesnt support multiple inheritance
+
+	class A
+	{
+		void f1()
+		{
+		}
+	}
+	class B
+	{
+		void f1()
+		{
+		}
+	}
+	class C extends A,B
+	{
+	}
+	diamond problem: two f1() methods will come to child class so if we call f1() method on
+	child class object java cant decide which f1() method has to be executed: ambiguity 
+
+	java supports multiple inheritance?justify
+	with respect to interface java supports multiple inheritance
+	with respect to class java dont support multiple inheritance
+
+	constructors are not inherited in java
+
+
+Polymorphism in java: method overloading, method overriding
+polymorphic object:
+static, dynamic polymorphism: what type of binding is involved: static, dynamic
+incase of method overloading: method names are same, but parameters must be different
+
+
+class Test
+{
+	void add()
+	{
+	}
+	void add(int x)
+	{
+	}
+	void add(int x,int y)
+	{
+	}
+	void add(float a,float b)
+	{
+	}
+	void add(double p,double q)
+	{
+	}
+}
+Method Overriding: redefining functionality of superclass method within the sub class
+super class method: overridden method
+sub class method: overriding method
+Rule1:
+1) signatures of both overridden & overriding methods must be the same
+
+case -1:
+class Parent 
+{
+	void m1(int x)
+	{
+	}
+}
+class Child extends Parent
+{
+	
+	void m1(float a)
+	{
+	}
+}
+the above case is not overriding as signature are different it is considered as method overloading
+
+Rule -2:
+
+2) return type also must be the same
+// rule-2 method overriding
+
+class Parent 
+{
+	void m1(int x)
+	{
+	}
+}
+class Child extends Parent
+{
+	int m1(int a)
+	{
+	}
+}
+D:\JB-MAY>javac overriding.java
+overriding.java:12: error: m1(int) in Child cannot override m1(int) in Parent
+        int m1(int a)
+            ^
+  return type int is not compatible with void
+1 error
+
+co-variant return type: until 1. 4 version parent & child class method return type must be the same
+from 1.5 version return type can be different but it not applicable for primitive type 
+primitive type in java: char, byte ,short, int,long,float,double,bool
+
+// rule-2 method overriding
+
+class Parent 
+{
+	Object m1(int x)
+	{
+		return null;
+	}
+}
+class Child extends Parent
+{
+	String m1(int a)
+	{
+		return null;
+	}
+}
+
+another case:
+// rule-2 method overriding
+
+class Parent 
+{
+	String m1(int x)
+	{
+		return null;
+	}
+}
+class Child extends Parent
+{
+	Object m1(int a)
+	{
+		return null;
+	}
+}
+
+D:\JB-MAY>javac overriding.java
+overriding.java:12: error: m1(int) in Child cannot override m1(int) in Parent
+        Object m1(int a)
+               ^
+  return type Object is not compatible with String
+1 error
+
+
+another case:
+// rule-2 method overriding
+
+class Parent 
+{
+	float m1(int x)
+	{
+		return 0.0f;
+	}
+}
+class Child extends Parent
+{
+	boolean m1(int a)
+	{
+		return true;
+	}
+}
+
+D:\JB-MAY>javac overriding.java
+overriding.java:12: error: m1(int) in Child cannot override m1(int) in Parent
+        boolean m1(int a)
+                ^
+  return type boolean is not compatible with float
+1 error
+
+
+Rule-3:
+overriding method should not have weaker access privileges than overridden method
+
+private   < default < protected < public 
+
+case-1:
+// rule-2 method overriding
+
+class Parent 
+{
+	public void m1(float a,int b)
+	{
+	}
+}
+class Child extends Parent
+{
+	void m1(float x,int y)
+	{
+	}
+}
+
+D:\JB-MAY>javac overriding.java
+overriding.java:11: error: m1(float,int) in Child cannot override m1(float,int) in Parent
+        void m1(float x,int y)
+             ^
+  attempting to assign weaker access privileges; was public
+1 error
+
+P:    void m1()
+C:   protected void m1()
+
+above case is acceptable
+
+case-2:
+class Parent 
+{
+	 private void m1(float a,int b)
+	{
+	}
+}
+class Child extends Parent
+{
+	 void m1(float x,int y)
+	{
+	}
+}
+it is not overriding because private members are not visible to child classes
+
+
+
+
+Rule-4:
+overriding method should not throw more no.of exceptions than overridden method
+Parent: smoking
+child: smoking
+
+Parent: smoking
+child: smoking, drinking
+
+parent: smoking,drinking
+child: no 
+
+Exceptions: checked, unchecked 
+Checked Exception:
+Throwable class is  root class for all exceptions: two child classes: Exception  , Error
+Exception: RunTime Exception, IOException, etc
+IOException: FNFE, EOFException etc
+
+RuntimeException & its child classes , Error & its child classes are unchecked exception
+all the remaining classes are checked exception
+case-1: valid
+p: void m1() throws Exception
+c: void m1()
+
+case-2: 
+p: void m1() 
+c: void m1() throws Exception
+
+
+p: void m1()
+c: void m1() throws ArithmeticException,NullPointerException
+
+case-3: 
+p: void m1() throws Exception
+c: void m1() throws IOException
+
+case-4:  Inv
+p: void m1() throws IOException
+c: void m1() throws Exception
+
+case-5:
+p: void m1() throws IOException
+c: void m1() throws FNFException,EOFException
+
+
+case-6: Inv
+p: void m1() throws IOException
+c: void m1() throws FNFException,EOFException, InterruptedException
+
+case-7: 
+p: void m1() throws IOException
+c: void m1() throws ArithmeticException,NullPointerException,ArrayIndexOutOfBoundsException
+
+parent class reference can refer child class object
+
+how to implement dynamic polymorphism in java?
+3 conditions must be satisfied
+1) superclass reference shoudl refer to subclass object
+2) method overriding
+3) using superclass ref make a method call
+
+static variables:
+when should we go for class variables
+can we access static variables inside instance method
+within a static method can we access both instance & class variables
+
+static method:
+main method: method overloading example
+static methods are inherited????
+parent to child with main as an example
+method hiding
+how to decide which methods are to be declared static / non static???
+
+commandline arguments: those arguments(inputs supplied to the function/method call statement)supplied to the main method from command line
+To receive command line arguments, main method declared with one formal parameter of 
+type Array: Array of Strings
+to convert any integer number in the form a string to  integer java provides a method:
+
+parseInt() is builtin method defined in Integer class as a static method
+
+Wrapper classes: Integer,Float,Double,Byte,Short,Long etc
+whenever if we want to convert primitive data type into object type
+
+
+autoboxing
+Integer i1=4865;
+unboxing
+int rno=i1;
+
+static variables are also called class variables
+class variable represent total class level information
+to access static varaible: object is not required 
+we can access static variable with the class name
+if the variable's value is not going to be changed from object to object then such varible must be declared
+as a static variable
+
+static varialbes are created first than instance variables
+
+from static method: we can access only static variables/other static methods of same class directly
+but you cant access non static members directly
+if u want to access n on static members of same class then we must create an object for that class 
+and using that object reference we can access any non static member of a class
+
+from non static method: we can access both static & non static members of a class
+
+
+static method: 
+Emp:   eid, salary,   ecount
+
+getEid()
+{
+	return eid;
+}
+getSalary()
+{
+	return salary;
+}
+getEmpInfo()
+{
+	return "emp id: "+eid+"salary : "+salary+"Employee count : "+ecount;
+}
+getEmpCount()
+{
+	return count;
+}
+calBonus(int exp)
+{
+	if(exp>=25)
+		float bonus=100000;
+}
+
+in a method if we use atleast one instance/non static varibles: non static method
+in a method if we use only static varaibles: static method
+in a method if we dont use either non static or static varible: static method
+
+
+between two classes: if we create parent child relationship everything will come 
+frm parent to child 
+parent : non static member, static members
+
+even static methods also inherited
+we cant override static method
+however if u redefine the functionality of parent given static method in the child class
+it is not method overriding,.... it is method hiding
+
+
+static block:
+
+static
+{
+	st-1
+	st-2
+	st-3
+
+}
+
+Modifier in java:
+=================
+final is a keyword
+can i declare a variable as final?
+yes
+if a variable is declared with final modifier we cant change its value
+final int x=25;
+
+can i declare a method as final?
+yes
+when a method is declared as a final no child class can override that method
+
+can i declare a class as final?
+yes
+if a class is declared as final we cant create child class for that class
+
+
+
+abstract modifier:
+
+abstract variable???
+no chance
+jshell> abstract int x=25;
+|  Error:
+|  Modifier 'abstract' not permitted
+|  abstract int x=25;
+|  ^------^
+x ==> 25
+
+can i declare a method as a abstract method???
+yes, you can
+
+what is an abstract method?
+bodyless / definitionless/ unimplemented methods are qualified with a keyword abstract
+
+class Fruit
+{
+	abstract void getTaste();
+}
+
+concrete method: also known as non abstract methods
+methods with body/ implemented methods
+in a class if atleast one method is abstract then the class also must be declared with abstract otherwise
+compile time error will come
+
+if a class abstract , it need not to have any abstract methods 
+concrete class: non abstract classes are concrete classes
+in an abstract class: we can write any no.of concrete/abstract methods
+
+we cant create an object for abstract class
+is it possible to create object reference for abstract class?
+yes
+
+for abstract class we can create child classes also
+it is the child class responsibility to provide the body for parent given abstract method , if child
+class not ready to provide the body then child class will be come abstract 
+
+abstract class can have constructors
+
+
+interface:
+========
+1) an interface is a class like java language construct
+2) interface is a keyword in java
+3) what a class contains: variables & methods
+what an interface contains: variables & method
+every member of an interface is by default public
+in interface: variables are by default: public, static, final
+in interface: methods are by default: abstract, public
+
+concrete ( non abstract) class ==> .class file 
+abstract class==> .class file
+interface ==> .class file
+
+is it possible to create a reference variable to an interface???
+s you can
+upto 1.7 version an interface is pure abstract class
+
+we can't instantiate an interface 
+
+from 1.8 version we can write a method with body but it must be declared with default keyword
+ 
+ we can create child class for an interface. but instead of extends keyword we must use implements keyword
+ because it is the child class responsibility to implement all abstract methods belongs parent interface
+
+we derived a class from another class: extends
+we derived a class from an interface: implements
+can we derive an interface from another interface: yes it is possible but we need to use extends 
+interface X
+{
+}
+interface Y extends X
+{
+}
+
+java doesnt support implementation multiple inheritance
+java supports declarative multiple inheritance
+
+it is possible to derive a class from another class, interface 
+
+interface X
+{
+}
+class Y
+{
+}
+class Z extends Y implements X
+{
+}
+
+Note: if u exchange the keywords extends, implements then we will get compile time error
+
+
+class Z implements X extends Y 
+{
+}
+Note: compile time error
+
+similarities between abstract class & interfaces
+========================================
+1) both can't be instantiated
+2)  both can have zero or more abstract methods
+3) both can participate in inheritance
+4) both can particpate in dynamic binding
+5) both are compiled to .class file
+
+
+differences between interface & abstract class:
+1) abstract class cant participate in multiple inheritance  but wrt interface multiple inheritance is possible
+2) abstract class is partially abstract ,partially concrete
+	interface: is pure abstract (upto 1.7 version)
+	from 1.8 version: defalult methods are introduced
+	interface I1
+	{
+		 void m1();
+		 void m2();
+	}
+	assume above interface is having 1000 child classes & every child class provided the body for both the methods m1, m2
+	as a part of enhancement if u add any new method m3() to the interface .. all the child classes need to provide the body for m3 method otherwise they will become abstract 
+	without disturbing any child class of an interface if u want to add a new method to an interface
+	jdk engineers introduced a  method called defaule method in 1.8 version
+
+	interace I1
+	{
+		void m1();
+		void m2();
+		default void m3()
+		{
+		}
+	}
+within a class if any method is declared with default modifier in java it is not allowed 
+class Test
+{
+	default void m1()
+	{
+	}
+}
+
+Test.java:3: error: modifier default not allowed here
+        default void m1()
+                     ^
+1 error
+
+from 1.8version: static methods are also allowed
+interface Vs class: interface is light weight when compared with class 
+interface Sample
+{
+	static void f1()
+	{
+	}
+	static void f2()
+	{
+	}
+	static void f3()
+	{
+	}
+}
+
+we can write main method in an interface also
+interface I1
+{
+	public static void main(String args[])
+	{
+		System.out.println("a bit surprising to me");
+	}
+}
+
+static, default both modifiers at a time we should not use upon a method
+public static default void main(String args[])
+	{
+		System.out.println("a bit surprising to me");
+	}
+
+Test.java:3: error: illegal combination of modifiers: static and default
+        public static default void main(String args[])
+                                   ^
+1 error
+
+•	If two interfaces have the implemented methods with the same name, then if any class implementing both the interfaces here also we will get the same diamond problem. To resolve this , it is made mandatory that , in that class we must override the same method 
+
+
+interface I1
+{
+	default void m1()
+	{
+		System.out.println("m1 method of Interface I1");
+	}
+}
+interface I2
+{
+	default void m1()
+	{
+		System.out.println("m1 method of Interface I2");
+	}
+}
+class C implements I1,I2
+{
+	public void m1()
+	{
+		System.out.println("in child class i am overriding parent given m1 method");
+	}
+}
+
+1.9 version: private methods are also allowed 
+Interface I1
+{
+	private void commoncode()
+	{
+		30 lines of code
+	}
+	default void m1()
+	{
+		commoncode()
+	}
+	default void m2()
+	{
+		commondcode()
+	}
+	======
+	default void m100()
+	{
+	}
+}
+
+
+
+3) in an abstract class:we can have a constructors: here constructors are useful especially in the abstract class if we have private data
+interface: constructors are not allowed: no scope for private variable
+String: is a collection of  character enclosed with in the double quotes
+String is immutable object means that once the object is created we cant change the content of the object
+if u want mutable object better to create StringBuffer object
+
+String Vs StringBuffer Vs StringBuilder
+================================
+String: is a collection of characters enclosed within the double quotes
+String object are immutable: once string object got created we are not allowd to make any changes
+this is called as immutability
+StringBuffer object is mutable(changeable)
+
+Constructors :
+1) String s1=new String();
+empty string object got created
+
+2) String s2=new String("java by pavan");
+
+3) for the given StringBuffer if u want to create equivalent String 
+String s3=new String(StringBuffer sb)
+
+4) for the given StringBuilder if u want to create equivalent String 
+String s3=new String(StringBuilder sb)
+
+5) String t=new String(char ch[])
+
+6) String x=new String(byte b[])
+
+Methods:
+public boolean isEmpty()
+public int length()
+public String replace(char old, char new)
+public String substring(int b) : return substring from begin index to end of the string
+public String substring(int b,int e):returns substring from begin to end-1
+
+public int indexOf(char ch): 
+index of first occurence it will return
+if specified character not available returns -1
+
+public int lastIndexOf(char ch): 
+
+public String toLowerCase()
+public String toUpperCase()
+equals() 
+equalsIgnoreCase()
+==================================
+trim():
+jshell> String t="   java"
+t ==> "   java"
+
+jshell> t.trim()
+$13 ==> "java"
+
+jshell> t
+t ==> "   java"
+
+jshell> String name="pavan          "
+name ==> "pavan          "
+
+jshell> name.trim()
+$16 ==> "pavan"
+
+jshell> String course="core java"
+course ==> "core java"
+
+jshell> course.trim()
+$18 ==> "core java"
+
+concat(): 
+jshell> course
+course ==> "core java"
+
+
+jshell> course.concat(" is very useful language")
+$20 ==> "core java is very useful language"
+
+jshell> course
+course ==> "core java"
+
+startsWith(string):
+jshell> s1.startsWith("ja")
+$10 ==> true
+
+jshell> s1.startsWith("ja1")
+$11 ==> false
+endsWith(String):
+
+When to go for StringBuffer?
+if the content of the String keep on changing then go for StringBuffer
+Constructors of StringBuffer class:
+===========================
+for every StringBuffer object length is different capacity is different
+capacity talks about how many characters it can accomodate
+java provides capacity() method to know this
+length talks about currently how many characters are there in StringBuffer
+
+StringBuffer sb=new StringBuffer()
+initial capacity: 16
+sb.append("abcdefghijklmnop")  still capacity is 16 only
+sb.append("q") to accommadate letter "q" capacity is increased acc to the following formula
+new capacity=(current capacity+1)*2
+
+StringBuffer sb=new StringBuffer(int capacity)
+with the specified capacity new object will be created
+StringBuffer sb=new StringBuffer(100)
+once if all 100 characters are filled & when u try to add 101th character then formula will come into the picture
+
+StringBuffer s=new StringBuffer(String s)
+capacity=s.length() + 16
+
+jshell> StringBuffer sb1=new StringBuffer("pavan")
+sb1 ==> pavan
+
+jshell> sb1
+sb1 ==> pavan
+
+jshell> sb1.append(" sir")
+$31 ==> pavan sir
+
+jshell> sb1
+sb1 ==> pavan si
+
+important methods of StringBuffer:
+==================================
+length()
+capacity()
+
+jshell> StringBuffer sb2=new StringBuffer()
+sb2 ==>
+
+jshell> sb2.capacity()
+$34 ==> 16
+
+jshell> sb2.length()
+$35 ==> 0
+
+jshell> sb2.append("abcd")
+$36 ==> abcd
+
+jshell> sb2.capacity()
+$37 ==> 16
+
+jshell> sb2.length()
+$38 ==> 4
+
+jshell> sb2.append("efghijklmnop")
+$39 ==> abcdefghijklmnop
+
+jshell> sb2.capacity()
+$40 ==> 16
+
+jshell> sb2.length()
+$41 ==> 16
+
+jshell> sb2.append("q")
+$42 ==> abcdefghijklmnopq
+
+jshell> sb2.capacity()
+$43 ==> 34
+
+jshell> sb2.length()
+$44 ==> 17
+
+jshell> StringBuffer sb=new StringBuffer("pavan")
+sb ==> pavan
+
+jshell> sb.capacity()
+$46 ==> 21
+
+
+charAt(index)
+
+setCharAt(index,char): replace the given character at specified index
+jshell> StringBuffer sb1=new StringBuffer("java")
+sb1 ==> java
+
+jshell> sb1.setCharAt(0,'y')
+
+jshell> sb1
+sb1 ==> yava
+
+append(String)
+Note: there are multiple append methods are available 
+insert(int offset, String s)
+note: overloaded methods are available
+delete(int startIndex, int endIndex)
+reverse()
+
+
+
+
+
+
+
+String Vs StringBuffer
+1) String mutable, SB immutable 
+String: concat   SB: append()
+2) == ref comparison
+3) equals()  content comparison
+Note: every class is a direct/indirect child class of Object class which contains
+equals() method which will meant for reference comparision
+but in String class this method is overriddent for content comparision
+where as in StringBuffer class this method is not overridden
+
+String Object Creation:
+====================
+SCP: STRING CONSTANT POOL
+String s1=new String("pavan")
+for the above line two objects will be created
+first object is created with content "pavan" in the heap area & it is referred by s1
+at the same time for string literal/value "pavan" one more object is created in string constant pool
+for futrure reference to reuse the same object which is not referred by any explicit reference but an 
+implicit reference is maintained by jvm
+in the heap area some part is reserved for SCP
+
+String s2="pavan"
+for the above line only one object will be created in the SCP but before creating any object first it will 
+check if any object with the same content exists it will reuse that object
+
+
+
+String s1=new String("pavan"): one object in heap area & reference s1, another object in SCP
+String s2=new String("pavan"): one object in heap area & reference s2, it wont create any object because already object with content "pavan" exist
+String s3="pavan"  : reuse the object in SCP
+String s4="pavan" :reuse the object in SCP
+
+because of the above 4 lines a total 3 objects got created
+
+Case 3:
+======
+String s1=new String("hot")
+s1.concat("winds")
+String s2=s1.concat("cold")
+s2.concat("rain")
+S.o.p(s1)
+S.o.p(s2)
+
+Importance of SCP:
+==================
+SCP concept is applicable for string only but not for StringBuffer,StringBuilder also
+in any application most commonly used object is : String 
+
+Other than String any other objects are immutable in java?
+objets of all wrapper classes
+
+
+
+
+
+
+
+
+
+
+==			reference comparision
+equals()		content comparision
+
+jshell> String s1=new String("java")
+s1 ==> "java"
+
+jshell> String s2=new String("java")
+s2 ==> "java"
+
+jshell> s1==s2
+$3 ==> false
+
+jshell> s1.equals(s2)
+$4 ==> true
+
+jshell> String s3=s1
+s3 ==> "java"
+
+jshell> s1==s3
+$6 ==> true
+
+jshell> String s4=new String("java123")
+s4 ==> "java123"
+
+jshell> s4.equals(s1)
+$8 ==> false
+
+
+
+
+
+String: modification must be allowed: StringBuffer, StringBuilder
+no modifications: String
+
+multiple threads must act up: StringBuilder
+only one thread: StringBuffer
+
+
+Array:
+
+int[] x=new int[-4];
+no compile time error but at runtime we will get error
+
+jshell> int[] x=new int[-5]
+|  Exception java.lang.NegativeArraySizeException: -5
+|        at (#1:1)
+
+size of an array: may be byte/short/char/int
+
+jshell> short x=12
+x ==> 12
+
+jshell> int[] a=new int[x]
+a ==> int[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+jshell> long n=10
+n ==> 10
+
+jshell> int[] b=new int[n]
+|  Error:
+|  incompatible types: possible lossy conversion from long to int
+|  int[]b=new int[n];
+|                 ^
+
+int[] x=new int[2147483648];
+compile time errror;
+ArrayExample1.java:5: error: integer number too large
+                        int[] x=new int[2147483648];
+
+in c language we know 2-d array is treated as matrix
+in java 2-d array not implemented as matrix
+sun people implemented 2-d array as an  array of arrays
+main advantage: memory utilization will be improved
+int x[][]=new int[2][]
+x[0]=new int[3]
+x[1]=new int[5]
+
+
+
+
+
+
+
+
+
+
+
+
+one exam- section- 75 students
+i want to store marks obtained every student
+int s1,s2,s3,s4,s5,....................s75;
+
+1-d array: 
+========
+int[]  x;
+int []x;
+int x[];
+
+2-d array:
+============
+in a college: iam taking: java subject: for 7 sections:
+where every section contains: 45 students
+i want to store marks obtained by every student... how can do this job?
+int s1[],s2[],s3[],........s7[];
+instead of creating 7   1-d arrays: it is a good programming practice to create only one 2-d array
+int sections[7][45]
+
+3-d array:
+========
+college1: 7 sections: strength: 45
+college2: 7 sections: strenth: 45
+college3
+college4
+college5
+
+int c1[7][45],c2[7][45]................  how many 2-d arrays we need to create? 5
+instead of creating 5   2-d arrays it is good programming practice to create only one 3-d array
+
+int marks[5][7][45]; it is not a valid declaration in java
+
+
+
+declare 2-d arrays:
+===============
+int[][]  x;
+int x[][]
+int [][]x
+int[]   []x
+int[]   x[]
+int []x[]
+
+
+
+
+syntax to create an array:
+====================
+datatype[]  array-name=new datatype[size]
+create an array of int with size 5
+ex: int[]  x=new int[5]
+
+limitations: 
+fixed in size
+capable to represent elements of similar type
+
+
+using which keyword we can create an object in java?
+ans: new
+
+for every array type java people created correponding class 
+jshell> int[] vals=new int[5]
+vals ==> int[5] { 0, 0, 0, 0, 0 }
+
+jshell> vals.getClass().getName()
+$15 ==> "[I"
+
+jshell> double []d=new double[2]
+d ==> double[2] { 0.0, 0.0 }
+
+jshell> d.getClass().getName()
+$17 ==> "[D"
+
+byte []n=new byte[]
+
+
+at the time of creating an array how to intialize ???
+double[] vals=new double[]{1.2,2.56,0.02,1.014,89.63}
+
+int[] x=new int[-45];
+no compile time error but we will get runtime error
+
+Exception in thread "main" java.lang.NegativeArraySizeException: -45
+        at ArrayExample5.main(ArrayExample5.java:5)
+
+
+if we are using any class in the program its .class file must be available in the current working directory
+otherwise it should belongs to lang package. 
+if .class file not available in CWD , also if it doesnt belongs to lang package then we must write import
+statement in the program
+import java.util.Scanner;// explicit import statement
+import java.util.*; // implicit import statement
+
+To read the data dynamically from the user , in java we can use
+Scanner class belongs to util package
+
+following methods :
+================
+nextInt()
+nextFloat()
+nextDouble()
+nextShort()
+nextLong()
+nextByte()
+next()
+nextLine()
+
+
+
+
+
+Packages in java:
+==============
+
+d:\jb-may\Today.java ===> .class  file must be stored in a package   "pavan" in the drive d:\
+d:\\pavan\\Today.class
+
+Exception Handling in java:
+=======================
+can u define what is an Exception?
+is a runtime error
+
+in java : Exception is an object
+
+whenever exception is raised what will happen?
+abnormal termination of the program
+
+Exception handling: 
+1) try  2) catch   3) throw   4) throws   5) finally 
+
+	class ReadFromFile
+	{
+
+		main()
+		{
+				FileReader fr=new FileReader("xyz.abc")
+		}
+	}
+
+if i want to print exception details: if the exception object is referred by e1
+a) e1.printStackTrace(): it will display name of the exception followed by description of the exception & Stack Trace
+b) System.out.print(e1): it will display name of the exception followed by description of the exception only
+c) e1.getMessage(): description of the exception only
+
+Catching Multiple Exception Types:
+
+
+throw 
+
+control flow in try-catch blocks
+===========================
+try
+{
+	statement-1
+	statement-2
+	statement-3
+	statement-4
+}
+catch(xyz e)
+{
+		statement-5
+		statement-6
+}
+statement-7
+case-1: if no exeception raised: statement1,2,3,4,7, normal termination
+case-2: if exception is raised at statement-3 & correponding catch block found: statement1,2,5,6,7, normal termination of the program
+case-3: if exception is raised at statement-3 & correponding catch block not found: statement1,2, abnormal termination
+case-4: exception raised at statment-5: abnormal termination
+
+finally : 
+
+try
+{
+	open a file : got a connection between java program & file
+	read the data from a file
+
+}
+catch(Exception e)
+{
+		
+}
+finally
+{
+	resource releasing code 
+}
+
+userdefined excepton in java:
+==========================
+for a java program(voting application): i have given an input: 15
+banking application: in your account: balance of 1000:
+enter withdraw amount: 5000
+
+throws
+
+
+class VotingException extends Exception
+{
+	VotingException()
+	{
+		System.out.println("ineligible to vote");
+	}
+}
+
+every user defined exception is a checked exception
+
+case-1:
+=======
+class A
+{
+	static void m1()throws FileNotFoundException
+	{
+	}
+}
+class B
+{
+	void test()
+	{
+		A.m1()
+	}
+}
+
+case-2:
+class A
+{
+	void m1()throws FileNotFoundException
+	{
+	}
+	void m2()
+	{
+	}
+}
+class B extends A
+{
+	void m2() 
+	{
+		System.out.println("iam redefining the functionality of m2 method because i didnt like parent version");
+		m1();
+	}
+}
+
+try
+{
+	resouce opening
+	operation using resouce
+}
+catch()
+{
+	ex handling code
+}
+finally
+{
+	resource releasing code
+}
+
+
+try with resource
+
+try(FileReader fr=new FileReader("sample.txt"))
+{
+}
+catch()
+{
+}
+
+
+FILE IO:  package: io
+
+File f=new File(String filename)
+
+
+
+Stream: is an object
+
+
+
+File 
+FileWriter
+BufferdWriter
+PrintWriter
+FileReader
+BufferedReader
+
+File class:
+	File f1=new File("sample.txt")
+
+	exists() -> to check with the given name any file or directory exist or not
+	delte() -> it is used to delete a file/directotry referred by File object
+	isFile() -> method returns true if f1 referring a file otherwise returns False
+	isDirectory() : method return true if f1 referring a directory otherwise returns false
+	list() ==> suppose f1 is pointing a directory ( a directory can have sub directories & files also)
+	the above method returns names of all files & directories present in the directory pointed by File object
+	Return type: String []
+FileWriter fw=new FileWriter(f)
+
+	FileWriter fw=new FileWriter("sample.txt");
+
+	write(int): write method copies character corresponding to given unicode integer
+	write(char [])
+	write(String)
+
+	BufferedWriter(): object of BufferedWriter will never talk to file directly instead it will contact any writer obj
+
+	newLine(): method is going to newline to the file. This method works correctly irrespective of the operting system
+
+	PrintWriter: class
+
+	write(int)
+	write(char[])
+	write(String)
+
+	==============
+	print(int)
+	print(float)
+	print(boolean)
+	============
+	println(int)
+	println(float)
+	etc
+
+
+	How to read the data from a file?
+	FileReader()
+
+
+	read(): method will read the data character by character and also it returns its unicode 
+
+	read(char[])
+
+	char ch[]=new char[10000];
+
+
+BufferedReader : 
+readLine() method
+
+
+Serialization:
+deserialization:
+
+
+MultiThreading in Java:
+=====================
+
+Multitasking Vs Multithreading:
+===========================
+1) executing java program - task-1
+2) opened-google chrome- started downloading-video-2gb - task2
+3) music player- listening the music- task-3
+process based multitasking - os level
+
+
+one thread - so many lines of code - c++
+java - Thread t1=new Thread();
+
+wap to implement the above taks but using only one our own thread class?
+wap to print current thread details?
+
+interface  Runnable
+{
+	public void run();
+}
+class Thread implements Runnable
+{
+	public void run()
+	{
+	}
+	public void start()
+	{
+		run();
+	}
+}
+
+for every java program: one flow is created: which is nothing but : a thread: name of that thread: is always: main
+for "main " thread default priority number: is always 5
+main thread is always responsible to execute main method
+
+
+when multiple threads are acting upon same object there is possibility for data inconsistency
+to overcome this problem we have a concept of Thread synchronization means that at a time only one 
+thread is allowed to act upon the same object ... no other thread is allowed to act upon the same object
+until first thread releases the lock on the object
+
+method level synchronization
+block level synchronization
+
+withdraw()
+{
+	=============
+	=============
+	
+	=============
+	=============
+	synchronized(this)
+	{
+		=============
+		=============
+	
+		=============
+		=============
+	}
+	
+	=============
+	=============
+	
+	=============
+	=============
+	
+	=============
+	=============
+}
+
+pgm- flow- thread - main
+gc - another flow - thread 
+
+daemon Threads:
+
+
+Dead lock:
+
+thread-1					thread-2
+{							{
+
+	t2.join()							t1.join()
+
+
+}							}
+================================================
